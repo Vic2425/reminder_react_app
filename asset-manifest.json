@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/reminder_react_app/static/css/main.63d8cf68.css",
-    "main.js": "/reminder_react_app/static/js/main.a2baecc1.js",
+    "main.js": "/reminder_react_app/static/js/main.c574bb67.js",
     "static/js/787.a21677f5.chunk.js": "/reminder_react_app/static/js/787.a21677f5.chunk.js",
     "index.html": "/reminder_react_app/index.html",
     "main.63d8cf68.css.map": "/reminder_react_app/static/css/main.63d8cf68.css.map",
-    "main.a2baecc1.js.map": "/reminder_react_app/static/js/main.a2baecc1.js.map",
+    "main.c574bb67.js.map": "/reminder_react_app/static/js/main.c574bb67.js.map",
     "787.a21677f5.chunk.js.map": "/reminder_react_app/static/js/787.a21677f5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63d8cf68.css",
-    "static/js/main.a2baecc1.js"
+    "static/js/main.c574bb67.js"
   ]
 }
