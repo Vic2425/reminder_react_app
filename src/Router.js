@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import cookie from 'cookie';
+import cookie from "cookie";
 
-import Home from "./components/Home";
+import Welcome from "./components/Welcome";
 import SignIn from "./components/SignIn";
-import Welcome from './components/Welcome';
-import AddReminder from './components/AddReminder'
+import Home from "./components/Home";
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
@@ -14,20 +13,15 @@ const checkAuth = () => {
 
 const ProtectedRoute = (props) => {
   const { component: Component, ...rest } = props;
-  return checkAuth() === true ? (
-    <Component {...rest} />
-  ) : (
-    <Navigate to='/' />
-  )
-}
+  return checkAuth() === true ? <Component {...rest} /> : <Navigate to="/" />;
+};
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Welcome />}/>
+      <Route path="/" element={<Welcome />} />
       <Route path="/signIn" element={<SignIn />} />
       <Route path="/home" element={<ProtectedRoute component={Home} />} />
-      <Route path="/addReminder" element={<ProtectedRoute component={AddReminder} />} />
     </Routes>
   );
 };
