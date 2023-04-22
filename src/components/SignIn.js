@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { TextField, Button, Container } from "@mui/material";
 import cookie from "cookie";
+
+import "../App.css";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -31,35 +32,106 @@ const SignIn = () => {
   };
 
   return (
-    <div className="App">
-      <Container maxWidth="sm">
+    <div className="login-wrap">
+      <div className="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
+        <label for="tab-1" class="tab">
+          Sign In
+        </label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up" />
+        <label for="tab-2" class="tab">
+          Sign Up
+        </label>
         <form className="login-form" onSubmit={login}>
-          <TextField
-            required
-            onChange={handleTextChange}
-            value={state.username}
-            name="username"
-            label="Username"
-            type="text"
-          />
-          <TextField
-            required
-            onChange={handleTextChange}
-            value={state.password}
-            name="password"
-            label="Password"
-            type="password"
-          />
-          <Button
-            type="submit"
-            className="login-button"
-            variant="contained"
-            color="primary"
-          >
-            Sign In
-          </Button>
+          <div className="sign-in-htm">
+            <div className="group">
+              <label for="user" class="label">
+                Username
+              </label>
+              <input
+                id="user"
+                onChange={handleTextChange}
+                value={state.username}
+                name="username"
+                label="Username"
+                type="text"
+                class="input"
+              />
+            </div>
+            <div className="group">
+              <label for="pass" class="label">
+                Password
+              </label>
+              <input
+                id="pass"
+                onChange={handleTextChange}
+                value={state.password}
+                name="password"
+                // label="Password"
+                type="password"
+                class="input"
+                data-type="password"
+              />
+            </div>
+            <div class="group">
+              <input id="check" type="checkbox" class="check" checked />
+              <label for="check">
+                <div class="hr"></div>
+                <span class="icon"></span> Keep me Signed in
+              </label>
+            </div>
+            <div className="group">
+              <input type="submit" className="button" value="Sign In" />
+            </div>
+            <div class="foot-lnk">
+              <a href="#forgot">Forgot Password?</a>
+            </div>
+          </div>
+          <div class="sign-up-htm">
+            <div class="group">
+              <label for="user" class="label">
+                Username
+              </label>
+              <input id="user" type="text" class="input" />
+            </div>
+            <div class="group">
+              <label for="pass" class="label">
+                Password
+              </label>
+              <input
+                id="pass"
+                type="password"
+                class="input"
+                data-type="password"
+              />
+            </div>
+            <div class="group">
+              <label for="pass" class="label">
+                Repeat Password
+              </label>
+              <input
+                id="pass"
+                type="password"
+                class="input"
+                data-type="password"
+              />
+            </div>
+            <div class="group">
+              <label for="pass" class="label">
+                Email Address
+              </label>
+              <input id="pass" type="text" class="input" />
+            </div>
+            <div class="group">
+              <input type="submit" class="button" value="Sign Up" />
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</label>
+            </div>
+          </div>
         </form>
-      </Container>
+      </div>
     </div>
   );
 };

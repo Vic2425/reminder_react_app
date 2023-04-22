@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-const AllReminders = () => {
-  const [startDate, setStartDate] = useState(new Date());
+import Calender from "./Calender";
 
+const AllReminders = () => {
   const [reminderText, setReminderText] = useState([
     {
       text: "A sample remider!",
@@ -51,15 +49,8 @@ const AllReminders = () => {
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-          <div>
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-              dateFormat="Pp"
-              showTimeSelect
-              timeFormat="p"
-            />
-          </div>
+          <Calender />
+
           <button type="submit">Add</button>
         </form>
         <div>
