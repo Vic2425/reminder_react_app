@@ -1,10 +1,8 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router";
 import cookie from "cookie";
-
-import Welcome from "./components/Welcome";
+import Dashboard from "./containers/Dashboard";
 import SignIn from "./components/SignIn";
-import Home from "./components/Home";
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
@@ -13,15 +11,21 @@ const checkAuth = () => {
 
 const ProtectedRoute = (props) => {
   const { component: Component, ...rest } = props;
-  return checkAuth() === true ? <Component {...rest} /> : <Navigate to="/" />;
+  return checkAuth() === true ? (
+    <Component {...rest} />
+  ) : (
+    <Navigate to="/signIn" />
+  );
 };
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Welcome />} />
       <Route path="/signIn" element={<SignIn />} />
-      <Route path="/home" element={<ProtectedRoute component={Home} />} />
+      <Route
+        path="/dashboard"
+        element={<ProtectedRoute component={Dashboard} />}
+      />
     </Routes>
   );
 };

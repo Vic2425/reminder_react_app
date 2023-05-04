@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const Calender = () => {
-  const [startDate, setStartDate] = useState(new Date());
+const Calendar = () => {
+  const [date, setDate] = useState(new Date());
+
+  const handleDateSelect = (e) => {
+    setDate(date);
+  };
 
   return (
     <div>
@@ -12,14 +16,16 @@ const Calender = () => {
         filterDate={(d) => {
           return new Date() < d;
         }}
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        type="date"
+        selected={date}
+        onChange={handleDateSelect}
         dateFormat="Pp"
         showTimeSelect
         timeFormat="p"
       />
+      <p>{date}</p>
     </div>
   );
 };
 
-export default Calender;
+export default Calendar;
