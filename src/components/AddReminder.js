@@ -9,6 +9,8 @@ import {
 // import Calendar from "./Calendar";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 class AddReminder extends Component {
@@ -52,7 +54,18 @@ class AddReminder extends Component {
       <Fragment>
         <div className="mainBox">
           <div className="header">
+            <div className="imgBx">
+              <img src="https://cdn-icons-png.flaticon.com/512/666/666201.png"></img>
+            </div>
+            <p>user name</p>
             <h1>Reminders:</h1>
+            <div className="logOut">
+              <Link to="/signIn">
+              <LogoutIcon sx={{ color: "#878787", fontSize: 30 }}  />
+
+              </Link>
+            </div>
+              <div className="hide">Log Out</div>
             <div className="add-btn">
               <button onClick={this.toggleDialog}>+</button>
             </div>
@@ -100,11 +113,7 @@ class AddReminder extends Component {
                 />
                 <br />
 
-                <Button
-                  variant="contained"
-                  color="primary"
-                  type="submit"
-                >
+                <Button variant="contained" color="primary" type="submit">
                   Submit
                 </Button>
               </form>

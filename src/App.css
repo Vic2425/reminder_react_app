@@ -11,52 +11,24 @@ body {
   background-color: #f5f3f7;
   letter-spacing: 0.5px;
 }
-.grid-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: grid;
-  grid-template-columns: 30% auto;
-  border: 1px solid black;
-  width: 1200px;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #f5f3f7;
-}
+
 .mainBox {
   display: flex;
-  margin-top: 50px;
+  margin-top: 30px;
   justify-content: center;
 }
-.grid-left {
-  margin-top: 50px;
-  /* position: sticky; */
-  position: relative;
-}
-.grid-left p {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.avatar {
-  margin-top: 50px;
-}
-.avatar p {
-  font-size: 20px;
-}
 .imgBx {
-  /* border: 1px solid black; */
   background-color: #e9e4ed;
+  box-shadow: inset 0px 0px 5px #61398f;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 15px;
+  left: 70px;
   padding-top: 8px;
 }
-img {
+.imgBx img {
   height: 80%;
   width: 80%;
   object-fit: contain;
@@ -64,42 +36,50 @@ img {
 }
 .logOut {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 300px;
-  left: 50%;
+  top: 28%;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
-.grid-left span {
-  /* position: absolute; */
-  margin-left: 10px;
-  font-size: 18px;
-  font-weight: 400;
+.hide {
+  display: none;
+  position: relative;
+  /* color: #f5f3f7; */
+  left: 35%;
+  top: 5px;
+  font-size: 12px;
 }
-.icon {
-  margin-right: 10px;
-  /* position: absolute; */
+
+.logOut:hover + .hide {
+  display: block;
+  color: #f5f3f7;
 }
 .header {
   align-items: center;
   justify-content: center;
-  height: 120px;
+  height: 150px;
   width: 80%;
   background-color: #8b5fbf;
   border-radius: 15px 15px 0 0;
   position: relative;
 }
-h1 {
+.header p {
   color: #f5f3f7;
   position: absolute;
-  top: 30%;
-  left: 25%;
+  font-size: 16px;
+  top: 18%;
+  left: 180px;
+  transform: translate(-50%, -50%);
+}
+.header h1 {
+  color: #f5f3f7;
+  position: absolute;
+  top: 60%;
+  left: 150px;
   transform: translate(-50%, -50%);
 }
 .add-btn {
   position: absolute;
-  top: 50%;
+  top: 72%;
   left: 85%;
   transform: translate(-50%, -50%);
 }
@@ -115,9 +95,9 @@ h1 {
   color: #878787;
   border: none;
   border-radius: 5px;
-  box-shadow: inset 1px 1px 5px #61398f;
+  box-shadow: inset 0px 0px 5px #61398f;
 }
-
+/*reminder list display */
 .list {
   position: relative;
   margin-top: 10px;
