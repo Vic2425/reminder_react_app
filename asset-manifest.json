@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/reminder_react_app/static/css/main.d5bd96fa.css",
-    "main.js": "/reminder_react_app/static/js/main.ec2b0678.js",
+    "main.css": "/reminder_react_app/static/css/main.56d3a325.css",
+    "main.js": "/reminder_react_app/static/js/main.4ac578d5.js",
     "static/js/787.a21677f5.chunk.js": "/reminder_react_app/static/js/787.a21677f5.chunk.js",
-    "static/media/Sprinkle_bg.svg": "/reminder_react_app/static/media/Sprinkle_bg.4f9d014ed0624e6ddbc8.svg",
+    "static/media/Sprinkle_bg1.svg": "/reminder_react_app/static/media/Sprinkle_bg1.c3aef1b19b106dbe2c27.svg",
     "index.html": "/reminder_react_app/index.html",
-    "main.d5bd96fa.css.map": "/reminder_react_app/static/css/main.d5bd96fa.css.map",
-    "main.ec2b0678.js.map": "/reminder_react_app/static/js/main.ec2b0678.js.map",
+    "main.56d3a325.css.map": "/reminder_react_app/static/css/main.56d3a325.css.map",
+    "main.4ac578d5.js.map": "/reminder_react_app/static/js/main.4ac578d5.js.map",
     "787.a21677f5.chunk.js.map": "/reminder_react_app/static/js/787.a21677f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5bd96fa.css",
-    "static/js/main.ec2b0678.js"
+    "static/css/main.56d3a325.css",
+    "static/js/main.4ac578d5.js"
   ]
 }
