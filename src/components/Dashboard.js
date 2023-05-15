@@ -2,14 +2,11 @@ import React from "react";
 import AddReminder from "../containers/AddReminder";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import moment from "moment";
-// import CheckEvents from "./CheckEvents";
 import "../App.css";
 
 const Dashboard = (props) => {
   return (
     <>
-      {/* <CheckEvents /> */}
-      {/* <div className="grid-container"> */}
       <AddReminder />
       <div className="grid-right">
         {props.reminders.map((reminder, index) => (
@@ -24,7 +21,6 @@ const Dashboard = (props) => {
             </div>
             <div className="note-box">
               <span
-                // className="check"
                 style={{
                   textDecoration: reminder.isDone ? "line-through" : "",
                 }}
@@ -47,7 +43,6 @@ const Dashboard = (props) => {
           </div>
         ))}
       </div>
-      {/* </div> */}
     </>
   );
 };
