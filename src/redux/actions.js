@@ -19,6 +19,7 @@ export const removeReminder = (index) => {
   };
 };
 
+
 export const checkEvent = (reminder) => {
   return {
     type: "CHECK_EVENT",

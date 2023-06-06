@@ -95,7 +95,6 @@ const SignIn = () => {
                   <input id="check" type="checkbox" class="check" checked />
                   <label for="check">
                     <div class="hr"></div>
-                    {/* <span class="icon"></span> Keep me Signed in */}
                   </label>
                 </div>
                 <div className="group">
@@ -140,13 +139,13 @@ const SignIn = () => {
                   </label>
                   <input id="pass" type="text" class="input" />
                 </div>
+                <div class="hr"></div>
                 <div class="group">
                   <input type="submit" class="button" value="Sign Up" />
                 </div>
-                <div class="hr"></div>
-                <div class="foot-lnk">
+                {/* <div class="foot-lnk">
                   <label for="tab-1">Already Member?</label>
-                </div>
+                </div> */}
               </div>
             </form>
           </div>

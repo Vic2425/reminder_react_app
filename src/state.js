@@ -10,7 +10,7 @@ export default {
     {
       id: "02",
       title: "Sample 02",
-      description: "Just a sample to show on DOM",
+      description: "Another sample",
       date: "04/25/2023",
       isDone: true,
     },

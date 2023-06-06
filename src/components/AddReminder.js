@@ -72,7 +72,7 @@ const AddReminder = ({ reminderTotal, addReminder }) => {
           <p>user name</p>
           <h1>Reminders:</h1>
           <div className="logOut">
-            <Link to="/signIn">
+            <Link to="/">
               <LogoutIcon sx={{ color: "#878787", fontSize: 30 }} />
             </Link>
           </div>
