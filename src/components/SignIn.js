@@ -52,18 +52,24 @@ const SignIn = () => {
       ) : (
         <div className="login-wrap">
           <div className="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
-            <label for="tab-1" class="tab">
+            <input
+              id="tab-1"
+              type="radio"
+              name="tab"
+              className="sign-in"
+              defaultChecked
+            />
+            <label htmlFor="tab-1" className="tab">
               Sign In
             </label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up" />
-            <label for="tab-2" class="tab">
+            <input id="tab-2" type="radio" name="tab" className="sign-up" />
+            <label htmlFor="tab-2" className="tab">
               Sign Up
             </label>
             <form className="login-form" onSubmit={login}>
               <div className="sign-in-htm">
                 <div className="group">
-                  <label for="user" class="label">
+                  <label htmlFor="user" className="label">
                     Username
                   </label>
                   <input
@@ -73,11 +79,11 @@ const SignIn = () => {
                     name="username"
                     label="Username"
                     type="text"
-                    class="input"
+                    className="input"
                   />
                 </div>
                 <div className="group">
-                  <label for="pass" class="label">
+                  <label htmlFor="pass" className="label">
                     Password
                   </label>
                   <input
@@ -87,64 +93,69 @@ const SignIn = () => {
                     name="password"
                     // label="Password"
                     type="password"
-                    class="input"
+                    className="input"
                     data-type="password"
                   />
                 </div>
-                <div class="group">
-                  <input id="check" type="checkbox" class="check" checked />
-                  <label for="check">
-                    <div class="hr"></div>
+                <div className="group">
+                  <input
+                    id="check"
+                    type="checkbox"
+                    className="check"
+                    defaultChecked
+                  />
+                  <label htmlFor="check">
+                    <div className="hr"></div>
                   </label>
                 </div>
                 <div className="group">
                   <input type="submit" className="button" value="Sign In" />
                 </div>
-                <div class="foot-lnk">
+                <div className="foot-lnk">
                   <a href="#forgot">Forgot Password?</a>
                 </div>
               </div>
-              <div class="sign-up-htm">
-                <div class="group">
-                  <label for="user" class="label">
+              <div className="sign-up-htm">
+                <div className="group">
+                  <label htmlFor="user" className="label">
                     Username
                   </label>
-                  <input id="user" type="text" class="input" />
+                  <input id="user2" type="text" className="input" />
                 </div>
-                <div class="group">
-                  <label for="pass" class="label">
+                <div className="group">
+                  <label htmlFor="pass" className="label">
                     Password
                   </label>
                   <input
-                    id="pass"
+                    id="pass2"
                     type="password"
-                    class="input"
+                    className="input"
                     data-type="password"
                   />
                 </div>
-                <div class="group">
-                  <label for="pass" class="label">
+                <div className="group">
+                  <label htmlFor="pass" className="label">
                     Repeat Password
                   </label>
                   <input
-                    id="pass"
+                    id="repeatpass"
                     type="password"
-                    class="input"
+                    className="input"
                     data-type="password"
                   />
                 </div>
-                <div class="group">
-                  <label for="pass" class="label">
+                <div className="group">
+                  <label htmlFor="pass" className="label">
                     Email Address
                   </label>
-                  <input id="pass" type="text" class="input" />
+                  <input id="email" type="text" className="input" />
                 </div>
-                <div class="hr"></div>
-                <div class="group">
-                  <input type="submit" class="button" value="Sign Up" />
+                <div className="hr"></div>
+                <div className="group">
+                  <input type="submit" className="button" value="Sign Up" />
                 </div>
-                {/* <div class="foot-lnk">
-                  <label for="tab-1">Already Member?</label>
+                {/* <div className="foot-lnk">
+                  <label htmlFor="tab-1">Already Member?</label>
                 </div> */}
               </div>
             </form>

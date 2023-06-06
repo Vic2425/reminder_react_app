@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddReminder from "../containers/AddReminder";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import moment from "moment";
-
+import axios from 'axios'
 import EditForm from "./EditForm";
 import "../App.css";
 
 const Dashboard = (props) => {
   const [editIndex, setEditIndex] = useState(-1);
+
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4001/hello")
+      .then((response) => {
+        console.log(response)
+        setMessage(response.data.msg);
+      })
+      .catch((error) => {
+        console.error("Error fetching message:", error);
+      });
+  }, []);
 
   const handleEdit = (index) => {
     setEditIndex(index);
@@ -25,6 +39,7 @@ const Dashboard = (props) => {
 
   return (
     <>
+     <h1>{message}</h1>
       <AddReminder />
       <div className="grid-right">
         {props.reminders.map((reminder, index) => (
@@ -34,7 +49,7 @@ const Dashboard = (props) => {
                 className="check"
                 type="checkbox"
                 checked={reminder.isDone}
-                onClick={() => props.markComplete(index)}
+                onChange={() => props.markComplete(index)}
               />
             </div>
             <div className="note-box">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route, Navigate } from "react-router";
 import cookie from "cookie";
 import Dashboard from "./containers/Dashboard";
@@ -14,7 +14,7 @@ const ProtectedRoute = (props) => {
   return checkAuth() === true ? (
     <Component {...rest} />
   ) : (
-    <Navigate to="/signIn" />
+    <Navigate to="/" />
   );
 };
 
